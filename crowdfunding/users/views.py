@@ -1,4 +1,4 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 
 # Create your views here.
 
@@ -7,16 +7,16 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .models import CustomUser
-from .serializers import CustomerUserSerializer
+from .serializers import CustomUserSerializer
 
 class CustomUserList(APIView):
     def get(self, request):
         users = CustomUser.objects.all()
-        serializer = CustomerUserSerializer(users, many=True)
+        serializer = CustomUserSerializer(users, many=True)
         return Response(serializer.data)
     
     def post(self, request):
-        serializer = CustomerUserSerializer(data=request.data)
+        serializer = CustomUserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(
@@ -24,7 +24,7 @@ class CustomUserList(APIView):
                 status=status.HTTP_201_CREATED
             )
         return Response(
-            serializer.erros,
+            serializer.errors,
             status=status.HTTP_400_BAD_REQUEST
         )
         
@@ -37,6 +37,6 @@ class CustomUserDetail(APIView):
         
     def get(self, request, pk):
         user = self.get_object(pk)
-        serializer = CustomerUserSerializer(user)
+        serializer = CustomUserSerializer(user)
         return Response(serializer.data)
         

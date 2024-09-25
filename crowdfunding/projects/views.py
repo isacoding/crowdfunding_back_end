@@ -1,4 +1,4 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 
 # Create your views here.
 
@@ -39,8 +39,9 @@ class ProjectList(APIView):
 class ProjectDetail(APIView):
     def get_object(self, pk):
         try:
-            project = Project.objects.get(pk=pk)
-            return project
+            # project = Project.objects.get(pk=pk)
+            # return project
+            return Project.objects.get(pk=pk)
         except Project.DoesNotExist:
             raise Http404
         
@@ -67,7 +68,7 @@ class PledgeList(APIView):
                 status=status.HTTP_201_CREATED
             )
         return Response(
-            serializer.erros,
+            serializer.errors,
             status=status.HTTP_400_BAD_REQUEST
         )
         
