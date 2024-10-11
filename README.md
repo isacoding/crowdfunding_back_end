@@ -125,43 +125,7 @@ MentHub was chosen as the name for the platform because it conveys the core idea
 
 The database schema has been simplified to support core functionalities and reduce complexity. The platform is built around three primary tables: **User**, **Mentorship Project**, and **Pledge**.
 
-### User Table:
-
-- **Purpose**: Stores information about both mentors and mentees.
-- **Fields**:
-  - `UniqueID` (Primary Key): A unique identifier for each user.
-  - `Password`: The password for user authentication.
-  - `Email`: The email address of the user.
-  - `FirstName`: The user's first name.
-  - `LastName`: The user's last name.
-  - `Role`: Defines whether the user is a mentor or a mentee.
-  - `Availability`: Available slots for mentors or mentoring preferences for mentees (e.g., short-term, long-term).
-  - `Expertise`: Areas of expertise for mentors or fields the mentee wants to learn more about.
-  - `AreaOfInterest`: Areas of interest related to the tech/STEM field (e.g., data science, web development).
-  - `Location`: The geographical location of the user.
-
-### Mentorship Project Table:
-
-- **Purpose**: Stores details of mentorship projects created by mentees.
-- **Fields**:
-  - `UniqueID` (Primary Key): A unique identifier for each project.
-  - `Title`: The title of the mentorship project.
-  - `Owner` (Foreign Key -> User): References the `UniqueID` of the mentee who created the project.
-  - `Description`: A detailed description of the project, including goals and objectives.
-  - `TargetMentorshipHours`: The total number of mentorship hours needed to complete the project.
-  - `is_open`: A boolean field indicating whether the project is open to new mentors or collaborators.
-  - `DateOfCreation`: The date when the project was created.
-  - `Status`: Indicates if the project is active, completed, or closed.
-
-### Pledge Table:
-
-- **Purpose**: Links mentorship pledges made by mentors to specific mentorship projects.
-- **Fields**:
-  - `UniqueID` (Primary Key): A unique identifier for each pledge.
-  - `Amount`: The number of mentorship hours pledged.
-  - `Project` (Foreign Key -> Mentorship Project): References the `UniqueID` of the mentorship project.
-  - `Supporter` (Foreign Key -> User): References the `UniqueID` of the mentor who made the pledge.
-  - `PledgeStatus`: The status of the pledge (e.g., active, completed, withdrawn).
+![MentHub Database Schema](images/menthub_database_schema.png)
 
 ## Next Steps
 
