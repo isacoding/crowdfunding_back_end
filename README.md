@@ -125,7 +125,7 @@ MentHub was chosen as the name for the platform because it conveys the core idea
 
 The database schema has been simplified to support core functionalities and reduce complexity. The platform is built around three primary tables: **User**, **Mentorship Project**, and **Pledge**.
 
-![MentHub Database Schema](crowdfunding/images/menthub_database_schema.png)
+<img src="crowdfunding/images/menthub_database_schema.png" alt="MentHub Database Schema" width="400"/>
 
 ## Next Steps
 
