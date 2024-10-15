@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-MentHub is a platform designed to connect women in STEM fields with experienced mentors to foster career growth, knowledge sharing, and professional development. The platform allows mentees to create mentorship projects, which mentors can then support by pledging hours based on their expertise.
+MentHub is a platform designed to connect women in STEM fields with experienced mentors to foster career growth, knowledge sharing, and professional development. The platform allows mentees to create mentorship projects, which mentors can support by pledging hours based on their expertise.
 
 ## Key Features
 
@@ -16,7 +16,7 @@ MentHub is a platform designed to connect women in STEM fields with experienced 
 
 3. **Pledge System**
 
-   - Mentors pledge hours to support a mentee's project. A progress tracker shows how many hours have been pledged versus the total target hours for the project.
+   - Mentors pledge hours to support a mentee’s project. A progress tracker shows how many hours have been pledged versus the total target hours for the project.
 
 4. **Basic Search/Filter**
 
@@ -64,7 +64,7 @@ MentHub is a platform designed to connect women in STEM fields with experienced 
 
 4. **Error Handling Page:**
    - **Failed Login Attempts:** Displays a message for invalid email or password ("Invalid email or password. Please try again.") and provides an option to reset the password.
-   - **Unauthorized Access:** Shows a message ("You do not have permission to access this page.") if a user tries to access restricted areas.
+   - **Unauthorised Access:** Shows a message ("You do not have permission to access this page.") if a user tries to access restricted areas.
    - **Invalid Input:** Provides error messages when required fields are missing or incorrectly formatted ("Please fill out all required fields correctly.").
 
 ---
