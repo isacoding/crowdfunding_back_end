@@ -1,134 +1,92 @@
 # MentHub: Tech Mentor Matching Platform for Women in STEM
 
-## Project Description
+## Project Overview
 
-MentHub is a mentorship platform aimed at empowering women in STEM by providing a space for mentors and mentees to connect, share experiences, and foster professional growth. Through structured mentorship opportunities, MentHub facilitates career development and knowledge exchange, bridging the gap between experienced professionals and aspiring women in the STEM community.
+MentHub is a platform designed to connect women in STEM fields with experienced mentors to foster career growth, knowledge sharing, and professional development. The platform allows mentees to create mentorship projects, which mentors can then support by pledging hours based on their expertise.
 
-## Concept and Name
-
-MentHub was chosen as the name for the platform because it conveys the core idea of mentorship and community in a sleek way. The goal is to establish a hub for collaboration and growth for women navigating their careers in STEM fields.
-
-## Target Audience/User Stories
-
-### Women in STEM:
-
-- Looking for guidance, mentorship, or professional advice to advance their careers.
-- Seeking project-based mentorship to support specific learning objectives or professional growth.
-
-### Women Transitioning into STEM:
-
-- Wanting guidance on how to transition into tech or a STEM career from another field.
-
-### Mentors:
-
-- Experienced professionals eager to share their expertise and give back to the community by mentoring others.
+This MVP version of MentHub focuses on the core functionality of user profiles (mentor/mentee), creating mentorship projects, pledging mentorship hours, and filtering by expertise and area of interest.
 
 ## Key Features
 
-### Mentor and Mentee Profiles:
+1. **User Profiles**
+   - **Mentors** can create profiles outlining their areas of expertise and availability for mentorship.
+   - **Mentees** can create profiles to showcase their career goals and the skills they wish to develop.
+2. **Mentorship Projects**
 
-- **Mentors** can create profiles detailing their areas of expertise, availability, and mentoring preferences (e.g., one-time catch-ups, three-month projects, or long-term mentorship).
-- **Mentees** can build profiles showcasing their career aspirations, skills they want to develop, and professional background. Additionally, mentees can showcase specific projects they are working on and seek guidance or mentorship for these projects. This allows mentors to see not only the mentee’s personal journey but also the tangible work they are currently focused on and need help with.
+   - **Mentees** can create mentorship projects specifying their career goals, skills to develop, and target mentorship hours.
+   - **Mentors** can view these projects and pledge hours to help mentees meet their objectives.
 
-### Project-Based Mentorship:
+3. **Pledge System**
 
-- Mentees can create projects that outline the skills they wish to learn or develop, their career goals, and the mentorship hours needed to achieve these objectives.
-- Mentors can view these projects and pledge a set number of hours to support them. A project can receive pledges from multiple mentors, making it a collaborative learning experience.
+   - Mentors pledge hours to support a mentee's project. A progress tracker shows how many hours have been pledged versus the total target hours for the project.
 
-### Flexible Matching and Communication:
+4. **Basic Search/Filter**
 
-- Mentors and mentees can connect regardless of geographical location through the platform, enabling virtual mentorship.
-- Users can filter profiles and projects based on:
-  - **Location**
-  - **Expertise**
-  - **Area of Interest**
-  - **Availability** (e.g., short-term, long-term, or one-time)
-  - **Industry Focus** (e.g., software development, data science, engineering, etc.)
-  - **Skills Offered** (for mentors) or **Skills Needed** (for mentees)
-- These filters ensure users find the right match that aligns with their mentorship preferences and career aspirations.
+   - Users can search for mentors or projects by expertise or area of interest.
 
-### Mentorship Pledges:
+5. **Authentication**
+   - Basic sign-up and login functionality for mentors and mentees.
 
-- Mentors can pledge hours to projects that align with their expertise and availability.
-- A pledge includes the number of hours offered and is linked to a specific mentorship project.
+---
 
-### Real-Time Notifications:
+## Target Audience/User Stories
 
-- Notifications for new mentorship requests, updates on pledged projects, and important platform announcements to keep users informed.
+1. **Women in STEM**
 
-## Front-End Pages/Functionality
+   - Seeking mentorship and guidance to advance their careers.
+   - Looking for project-based support to develop specific skills.
 
-### Homepage:
+2. **Women Transitioning into STEM**
 
-- **Navigation bar**: Sign up/Login buttons, Create Mentorship Projects button.
-- **Display all mentorship projects**: Allows users to explore all available projects and mentorship opportunities.
-- **Search and filter options**: Users can search by category, skillset, or project title.
-- **Project details button**: Redirects to the mentorship project details page.
-- **Footer**: Social media links, contact information, and other platform resources.
+   - Needing mentorship and advice on how to transition from other fields into STEM.
 
-### Mentorship Project Details Page:
+3. **Mentors**
+   - Experienced professionals eager to share their knowledge and mentor others.
+   - Willing to pledge hours to support specific mentorship projects.
 
-- Shows the project owner (mentee) and mentors who have pledged to support the project.
-- Displays project description, required skills, and target mentorship hours.
-- Progress bar showing the number of hours pledged versus the target hours.
-- Button for mentors to pledge hours.
+---
 
-### Profile Page:
+## Front-End Pages/Functionality (Simplified)
 
-- **Mentor Profile View**:
-  - List expertise, availability, contact preferences, and mentorship options.
-- **Mentee Profile View**:
-  - Share career goals, skills to develop, and mentorship needs.
-  - Display all active and completed projects, with the option to highlight projects that need mentorship or guidance.
-- Users can edit personal details, update project information, and manage mentorship requests.
-- Mentees can also view other mentee profiles, connect with them, and collaborate on shared projects.
+1. **Homepage:**
 
-### Error Handling Page:
+   - Sign-up/Login options.
+   - Display mentorship projects with search and filter options based on expertise or project title.
 
-- Displays appropriate messages for failed logins, unauthorised access, or invalid inputs.
-- Shows error messages when required fields are missing or incorrectly formatted.
+2. **Mentorship Project Details Page:**
 
-## API Specification
+   - Shows project description, target hours, and progress.
+   - Mentors can pledge hours to a project.
 
-| URL                    | HTTP Method | Purpose                                              | Request Body   | Success Response Code | Authentication/Authorisation              |
-| ---------------------- | ----------- | ---------------------------------------------------- | -------------- | --------------------- | ----------------------------------------- |
-| /mentors/              | GET         | Returns a list of all mentors                        | N/A            | 200                   | N/A                                       |
-| /mentors/:id           | GET         | Returns a mentor by ID                               | N/A            | 200                   | N/A                                       |
-| /mentors/              | POST        | Create a new mentor profile                          | Mentor object  | 201                   | Login required                            |
-| /mentors/:id           | PUT         | Update a mentor profile                              | Mentor object  | 200                   | Login required / Must be the mentor       |
-| /mentors/:id           | DELETE      | Delete a mentor profile                              | N/A            | 200                   | Login required / Must be the mentor       |
-| /mentees/              | GET         | Returns a list of all mentees                        | N/A            | 200                   | N/A                                       |
-| /mentees/:id           | GET         | Returns a mentee by ID                               | N/A            | 200                   | N/A                                       |
-| /mentees/              | POST        | Create a new mentee profile                          | Mentee object  | 201                   | Login required                            |
-| /mentees/:id           | PUT         | Update a mentee profile                              | Mentee object  | 200                   | Login required / Must be the mentee       |
-| /mentees/:id           | DELETE      | Delete a mentee profile                              | N/A            | 200                   | Login required / Must be the mentee       |
-| /projects/             | GET         | Returns a list of all mentorship projects            | N/A            | 200                   | N/A                                       |
-| /projects/:id          | GET         | Returns a mentorship project by ID                   | N/A            | 200                   | N/A                                       |
-| /projects?is_open=True | GET         | Returns all open mentorship projects                 | N/A            | 200                   | N/A                                       |
-| /projects/             | POST        | Create a new mentorship project                      | Project object | 201                   | Login required / Must be a mentee         |
-| /projects/:id          | PUT         | Update a mentorship project                          | Project object | 200                   | Login required / Must be project owner    |
-| /projects/:id          | DELETE      | Delete a mentorship project                          | N/A            | 200                   | Login required / Must be project owner    |
-| /projects/:id/pledges/ | GET         | Returns a list of all pledges for a specific project | N/A            | 200                   | N/A                                       |
-| /pledges/              | GET         | Returns a list of all pledges made by mentors        | N/A            | 200                   | N/A                                       |
-| /pledges/:id           | GET         | Returns a pledge by ID                               | N/A            | 200                   | N/A                                       |
-| /pledges/              | POST        | Create a new pledge for mentorship hours             | Pledge object  | 201                   | Login required / Must be a mentor         |
-| /pledges/:id           | PUT         | Update a pledge                                      | Pledge object  | 200                   | Login required / Must be the pledge owner |
-| /pledges/:id           | DELETE      | Delete a pledge                                      | N/A            | 200                   | Login required / Must be the pledge owner |
-| /users/                | GET         | Returns a list of all users (mentors and mentees)    | N/A            | 200                   | Login required / Must be admin            |
-| /users/:id             | GET         | Returns a user by ID                                 | N/A            | 200                   | Login required                            |
-| /users/                | POST        | Sign up a new user (mentor or mentee)                | User object    | 201                   | N/A                                       |
-| /users/login           | POST        | Login an existing user                               | User object    | 200                   | N/A                                       |
-| /users/:id             | PUT         | Update a user profile by ID                          | User object    | 200                   | Login required / Must be the user         |
-| /users/:id             | DELETE      | Delete a user profile by ID                          | N/A            | 200                   | Login required / Must be the user         |
+3. **Profile Page:**
 
-## Database Schema
+   - **Mentor Profiles:** List expertise and availability.
+   - **Mentee Profiles:** Share career goals and skills to develop.
+   - Users can edit their personal information and manage their mentorship projects or pledges.
 
-The database schema has been simplified to support core functionalities and reduce complexity. The platform is built around three primary tables: **User**, **Mentorship Project**, and **Pledge**.
+4. **Error Handling Page:**
+   - **Failed Login Attempts:** Displays a message for invalid email or password ("Invalid email or password. Please try again.") and provides an option to reset the password.
+   - **Unauthorized Access:** Shows a message ("You do not have permission to access this page.") if a user tries to access restricted areas.
+   - **Invalid Input:** Provides error messages when required fields are missing or incorrectly formatted ("Please fill out all required fields correctly.").
+
+---
+
+## API Specification (Simplified)
+
+| **URL**        | **HTTP Method** | **Purpose**                              | **Request Body** | **Success Response Code** | **Authentication/Authorisation**  |
+| -------------- | --------------- | ---------------------------------------- | ---------------- | ------------------------- | --------------------------------- |
+| `/mentors/`    | GET             | Returns all mentors                      | N/A              | 200                       | N/A                               |
+| `/mentors/`    | POST            | Create a mentor profile                  | Mentor object    | 201                       | Login required                    |
+| `/mentees/`    | GET             | Returns all mentees                      | N/A              | 200                       | N/A                               |
+| `/mentees/`    | POST            | Create a mentee profile                  | Mentee object    | 201                       | Login required                    |
+| `/projects/`   | GET             | Returns all mentorship projects          | N/A              | 200                       | N/A                               |
+| `/projects/`   | POST            | Create a new mentorship project          | Project object   | 201                       | Login required / Must be a mentee |
+| `/pledges/`    | POST            | Create a new pledge for mentorship hours | Pledge object    | 201                       | Login required / Must be a mentor |
+| `/users/login` | POST            | Log in an existing user                  | User object      | 200                       | N/A                               |
+| `/users/`      | POST            | Sign up a new user (mentor or mentee)    | User object      | 201                       | N/A                               |
+
+---
+
+## Database Schema (Simplified)
 
 <img src="crowdfunding/images/menthub_database_schema.png" alt="MentHub Database Schema" width="400"/>
-
-## Next Steps
-
-1. Implement advanced search options for a more refined user experience.
-2. Enhance the notification system for more personalised updates.
-3. Develop a dashboard for users to track mentorship progress and feedback.
