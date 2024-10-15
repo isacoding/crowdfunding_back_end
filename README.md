@@ -4,8 +4,6 @@
 
 MentHub is a platform designed to connect women in STEM fields with experienced mentors to foster career growth, knowledge sharing, and professional development. The platform allows mentees to create mentorship projects, which mentors can then support by pledging hours based on their expertise.
 
-This MVP version of MentHub focuses on the core functionality of user profiles (mentor/mentee), creating mentorship projects, pledging mentorship hours, and filtering by expertise and area of interest.
-
 ## Key Features
 
 1. **User Profiles**
@@ -46,7 +44,7 @@ This MVP version of MentHub focuses on the core functionality of user profiles (
 
 ---
 
-## Front-End Pages/Functionality (Simplified)
+## Front-End Pages/Functionality
 
 1. **Homepage:**
 
@@ -71,7 +69,7 @@ This MVP version of MentHub focuses on the core functionality of user profiles (
 
 ---
 
-## API Specification (Simplified)
+## API Specification
 
 | **URL**        | **HTTP Method** | **Purpose**                              | **Request Body** | **Success Response Code** | **Authentication/Authorisation**  |
 | -------------- | --------------- | ---------------------------------------- | ---------------- | ------------------------- | --------------------------------- |
@@ -87,6 +85,6 @@ This MVP version of MentHub focuses on the core functionality of user profiles (
 
 ---
 
-## Database Schema (Simplified)
+## Database Schema
 
-<img src="crowdfunding/images/menthub_database_schema.png" alt="MentHub Database Schema" width="400"/>
+<img src="crowdfunding/images/menthub_database_schema_v2.jpg" alt="MentHub Database Schema" width="400"/>
