@@ -67,23 +67,23 @@ MentHub is a platform designed to connect women in STEM fields and those transit
 
 ## API Specification
 
-| **URL**                | **HTTP Method** | **Purpose**                                                                                                              | **Request Body**                               | **Success Response Code** | **Authentication/Authorization** |
-| ---------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------- | ------------------------- | -------------------------------- |
-| `/projects/`           | POST            | Create a request for help (e.g. Please help me with my Django project est 5 hours, professional development est 3 hours) | Project object (what the user is asking for)   | 201                       | Logged in                        |
-| `/projects/`           | GET             | List open projects                                                                                                       | N/A                                            | 200                       | N/A                              |
-| `/projects/<pk>/`      | GET             | Get details on specific ad                                                                                               | N/A                                            | 200                       | N/A                              |
-| `/projects/<pk>/`      | PUT             | Update the ad description                                                                                                | Project objects                                | 200                       | Project owner                    |
-| `/projects/<pk>/`      | DELETE          | Delete a project                                                                                                         | N/A                                            | 200                       | Project owner                    |
-| `/pledges/`            | POST            | Submit mentorship hours (by mentor)                                                                                      | Pledge object                                  | 201                       | Login required                   |
-| `/pledges/<pk>/`       | PUT             | Update a pledge                                                                                                          | Pledge object                                  | 201                       | Pledge owner                     |
-| `/pledges/<pk>/`       | DELETE          | Delete a pledge                                                                                                          | N/A                                            | 200                       | Pledge owner                     |
-| `/users/`              | GET             | Returns all users                                                                                                        | N/A                                            | 200                       | Superuser                        |
-| `/users/<pk>/`         | GET             | Returns the specific details of the user (skills)                                                                        | N/A                                            | 200                       | Owner of the profile             |
-| `/users/<pk>/`         | PUT             | Update the user info                                                                                                     | User object                                    | 200                       | Owner of the profile             |
-| `/users/<pk>/`         | DELETE          | Delete user                                                                                                              | N/A                                            | 200                       | Owner of the profile             |
-| `/api-auth-token/`     | POST            | Log in an existing user                                                                                                  | { “username”: username, “password”: password } | 200                       | N/A                              |
-| `/users/`              | POST            | Sign up a new user (mentor or mentee)                                                                                    | User object                                    | 201                       | N/A                              |
-| `/users/<pk>/pledges/` | GET             | Returns all the pledges for a specific user                                                                              | N/A                                            | 200                       | Owner of the profile             |
+| **URL**                | **HTTP Method** | **Purpose**                                 | **Request Body**                               | **Success Response Code** | **Authentication/Authorization** |
+| ---------------------- | --------------- | ------------------------------------------- | ---------------------------------------------- | ------------------------- | -------------------------------- |
+| `/projects/`           | POST            | Create a request for help                   | Project object (what the user is asking for)   | 201                       | Logged in                        |
+| `/projects/`           | GET             | List open projects                          | N/A                                            | 200                       | N/A                              |
+| `/projects/<pk>/`      | GET             | Get details on specific request             | N/A                                            | 200                       | N/A                              |
+| `/projects/<pk>/`      | PUT             | Update the request description              | Project object                                 | 200                       | Project owner                    |
+| `/projects/<pk>/`      | DELETE          | Delete a project                            | N/A                                            | 200                       | Project owner                    |
+| `/pledges/`            | POST            | Submit mentorship hours (by mentor)         | Pledge object                                  | 201                       | Login required                   |
+| `/pledges/<pk>/`       | PUT             | Update a pledge                             | Pledge object                                  | 201                       | Pledge owner                     |
+| `/pledges/<pk>/`       | DELETE          | Delete a pledge                             | N/A                                            | 200                       | Pledge owner                     |
+| `/users/`              | GET             | Returns all users                           | N/A                                            | 200                       | Superuser                        |
+| `/users/<pk>/`         | GET             | Returns the specific details of the user    | N/A                                            | 200                       | Owner of the profile             |
+| `/users/<pk>/`         | PUT             | Update the user info                        | User object                                    | 200                       | Owner of the profile             |
+| `/users/<pk>/`         | DELETE          | Delete user                                 | N/A                                            | 200                       | Owner of the profile             |
+| `/api-auth-token/`     | POST            | Log in an existing user                     | { “username”: username, “password”: password } | 200                       | N/A                              |
+| `/users/`              | POST            | Sign up a new user (mentor or mentee)       | User object                                    | 201                       | N/A                              |
+| `/users/<pk>/pledges/` | GET             | Returns all the pledges for a specific user | N/A                                            | 200                       | Owner of the profile             |
 
 ---
 
@@ -91,7 +91,9 @@ MentHub is a platform designed to connect women in STEM fields and those transit
 
 <img src="crowdfunding/images/menthub_database_schema_v2.jpg" alt="MentHub Database Schema" width="400"/>
 
-# Project Requirements
+---
+
+## Project Requirements
 
 Your crowdfunding project must:
 
