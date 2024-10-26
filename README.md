@@ -128,5 +128,50 @@ Please include the following in your README document:
 - [x] A [screenshot](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) of Insomnia, demonstrating a successful GET method for any endpoint.
 - [x] A [screenshot](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) of Insomnia, demonstrating a successful POST method for any endpoint.
 - [x] A [screenshot](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) of Insomnia, demonstrating a token being returned.
-- [ ] Step-by-step instructions for how to register a new user and create a new project (i.e. endpoints and body data).
 - [x] Your refined API specification and Database Schema.
+- [x] Step-by-step instructions for how to register a new user and create a new project (i.e. endpoints and body data).
+
+### **Documentation:**
+
+_Step-by-step instructions for how to register a new user and create a new project._
+
+1. Create User
+
+```shell
+    curl --request POST \
+    --url https://menthub-3e662e18d026.herokuapp.com/users/ \
+    --header 'Content-Type: application/json' \
+    --data '{
+        "username": "<insert_unique_username>",
+        "email": "<insert_unique_email>",
+        "password":"<insert_password>",
+    }'
+```
+
+2. Sign in User
+
+```shell
+    curl --request POST \
+    --url https://menthub-3e662e18d026.herokuapp.com/api-token-auth/ \
+    --header 'Content-Type: application/json' \
+    --data '{
+        "username": "<insert_unique_username>",
+        "password": "<insert_password>"
+    }'
+```
+
+3. Create Project
+
+```shell
+    curl --request POST \
+    --url https://menthub-3e662e18d026.herokuapp.com/projects/ \
+    --header 'Content-Type: application/json' \
+    --data '{
+        "title": "<unique_title>",
+        "description": "<project_description>",
+        "goal": <integer>,
+        "image": "<image_url>",
+        "is_open": <boolean>,
+        "date_created": "<auto_filled as today>"
+    }'
+```
