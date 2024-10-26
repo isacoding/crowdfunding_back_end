@@ -63,8 +63,6 @@ MentHub is a platform designed to connect women in STEM fields and those transit
    - Unauthorised access: Shows a message ("You do not have permission to access this page.") if a user tries to access restricted areas.
    - Invalid input: Provides error messages when required fields are missing or incorrectly formatted ("Please fill out all required fields correctly.").
 
----
-
 ## API Specification
 
 | **URL**                | **HTTP Method** | **Purpose**                                       | **Request Body**                               | **Success Response Code** | **Authentication/Authorisation** |
@@ -84,8 +82,6 @@ MentHub is a platform designed to connect women in STEM fields and those transit
 | `/api-auth-token/`     | POST            | Log in an existing user                           | { “username”: username, “password”: password } | 200                       | N/A                              |
 | `/users/`              | POST            | Sign up a new user (mentor or mentee)             | User object                                    | 201                       | N/A                              |
 | `/users/<pk>/pledges/` | GET             | Returns all the pledges for a specific user       | N/A                                            | 200                       | Owner of the profile             |
-
----
 
 ## Database Schema
 
@@ -123,8 +119,6 @@ Your crowdfunding project must:
 - [x] Handle failed requests gracefully (e.g. you should have a custom 404 page rather than the default error page).
 - [x] Use Token Authentication, including an endpoint to obtain a token along with the current user's details.
 - [ ] Implement responsive design.
-
----
 
 ## Submission
 
