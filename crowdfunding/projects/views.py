@@ -106,6 +106,11 @@ class PledgeList(APIView):
             return Response(status=status.HTTP_204_NO_CONTENT)
         except Pledge.DoesNotExist:
             return Response({"error": "Pledge not found."}, status=status.HTTP_404_NOT_FOUND)
+        
+    def get(self, request):
+        pledges = Pledge.objects.filter(supporter=request.user)  # Filter pledges by the authenticated user
+        serializer = PledgeSerializer(pledges, many=True)  # Serialize the list of pledges
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
  
         
