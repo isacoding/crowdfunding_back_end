@@ -60,36 +60,30 @@ MentHub is a platform designed to connect women in STEM fields and those transit
    - Once a request is accepted, the mentorship begins.
 4. **Error Handling Pages**:
    - Failed login attempts: Displays an error message ("Invalid email or password. Please try again.") and an option to reset the password.
-   - Unauthorized access: Shows a message ("You do not have permission to access this page.") if a user tries to access restricted areas.
+   - Unauthorised access: Shows a message ("You do not have permission to access this page.") if a user tries to access restricted areas.
    - Invalid input: Provides error messages when required fields are missing or incorrectly formatted ("Please fill out all required fields correctly.").
 
 ---
 
 ## API Specification
 
-| **URL**                | **HTTP Method** | **Purpose**                                 | **Request Body**                               | **Success Response Code** | **Authentication/Authorization** |
-| ---------------------- | --------------- | ------------------------------------------- | ---------------------------------------------- | ------------------------- | -------------------------------- |
-| `/projects/`           | POST            | Create a request for help                   | Project object (what the user is asking for)   | 201                       | Logged in                        |
-| `/projects/`           | GET             | List open projects                          | N/A                                            | 200                       | N/A                              |
-| `/projects/<pk>/`      | GET             | Get details on specific request             | N/A                                            | 200                       | N/A                              |
-| `/projects/<pk>/`      | PUT             | Update the request description              | Project object                                 | 200                       | Project owner                    |
-| `/projects/<pk>/`      | DELETE          | Delete a project                            | N/A                                            | 200                       | Project owner                    |
-| `/pledges/`            | POST            | Submit mentorship hours (by mentor)         | Pledge object                                  | 201                       | Login required                   |
-| `/pledges/<pk>/`       | PUT             | Update a pledge                             | Pledge object                                  | 201                       | Pledge owner                     |
-| `/pledges/<pk>/`       | DELETE          | Delete a pledge                             | N/A                                            | 200                       | Pledge owner                     |
-| `/users/`              | GET             | Returns all users                           | N/A                                            | 200                       | Superuser                        |
-| `/users/<pk>/`         | GET             | Returns the specific details of the user    | N/A                                            | 200                       | Owner of the profile             |
-| `/users/<pk>/`         | PUT             | Update the user info                        | User object                                    | 200                       | Owner of the profile             |
-| `/users/<pk>/`         | DELETE          | Delete user                                 | N/A                                            | 200                       | Owner of the profile             |
-| `/api-auth-token/`     | POST            | Log in an existing user                     | { “username”: username, “password”: password } | 200                       | N/A                              |
-| `/users/`              | POST            | Sign up a new user (mentor or mentee)       | User object                                    | 201                       | N/A                              |
-| `/users/<pk>/pledges/` | GET             | Returns all the pledges for a specific user | N/A                                            | 200                       | Owner of the profile             |
-
----
-
-## Database Schema
-
-<img src="crowdfunding/images/menthub_database_schema_v2.jpg" alt="MentHub Database Schema" width="400"/>
+| **URL**                | **HTTP Method** | **Purpose**                                       | **Request Body**                               | **Success Response Code** | **Authentication/Authorisation** |
+| ---------------------- | --------------- | ------------------------------------------------- | ---------------------------------------------- | ------------------------- | -------------------------------- |
+| `/projects/`           | POST            | Create an ad for help                             | Project object (what the user is asking for)   | 201                       | Logged in                        |
+| `/projects/`           | GET             | List open projects                                | N/A                                            | 200                       | N/A                              |
+| `/projects/<pk>/`      | GET             | Get details on specific ad                        | N/A                                            | 200                       | N/A                              |
+| `/projects/<pk>/`      | PUT             | Update the ad description                         | Project object                                 | 200                       | Project owner                    |
+| `/projects/<pk>/`      | DELETE          | Delete a project                                  | N/A                                            | 200                       | Project owner                    |
+| `/pledges/`            | POST            | Submit mentorship hours (by mentor)               | Pledge object                                  | 201                       | Login required                   |
+| `/pledges/<pk>/`       | PUT             | Update a pledge                                   | Pledge object                                  | 200                       | Pledge owner                     |
+| `/pledges/<pk>/`       | DELETE          | Delete a pledge                                   | N/A                                            | 200                       | Pledge owner                     |
+| `/users/`              | GET             | Returns all users                                 | N/A                                            | 200                       | Superuser                        |
+| `/users/<pk>/`         | GET             | Returns the specific details of the user (skills) | N/A                                            | 200                       | Owner of the profile             |
+| `/users/<pk>/`         | PUT             | Update the user info                              | User object                                    | 200                       | Owner of the profile             |
+| `/users/<pk>/`         | DELETE          | Delete user                                       | N/A                                            | 200                       | Owner of the profile             |
+| `/api-auth-token/`     | POST            | Log in an existing user                           | { “username”: username, “password”: password } | 200                       | N/A                              |
+| `/users/`              | POST            | Sign up a new user (mentor or mentee)             | User object                                    | 201                       | N/A                              |
+| `/users/<pk>/pledges/` | GET             | Returns all the pledges for a specific user       | N/A                                            | 200                       | Owner of the profile             |
 
 ---
 
@@ -117,20 +111,22 @@ Your crowdfunding project must:
   - [x] The supporter/user (i.e. who created the pledge)
   - [x] Whether the pledge is anonymous or not
   - [x] A comment to go along with the pledge
-- [x] Implement suitable update/delete functionality, e.g., should a project owner be allowed to update a project description?
-- [x] Implement suitable permissions, e.g., who is allowed to delete a pledge?
+- [x] Implement suitable update/delete functionality, e.g. should a project owner be allowed to update a project description?
+- [x] Implement suitable permissions, e.g. who is allowed to delete a pledge?
 - [x] Return the relevant status codes for both successful and unsuccessful requests to the API.
-- [x] Handle failed requests gracefully (e.g., you should have a custom 404 page rather than the default error page).
+- [x] Handle failed requests gracefully (e.g. you should have a custom 404 page rather than the default error page).
 - [x] Use Token Authentication, including an endpoint to obtain a token along with the current user's details.
 - [ ] Implement responsive design.
 
+---
+
 ## Submission
 
-Please include the following in your readme doc:
+Please include the following in your README document:
 
 - [ ] A link to the deployed project.
 - [ ] A screenshot of Insomnia, demonstrating a successful GET method for any endpoint.
 - [ ] A screenshot of Insomnia, demonstrating a successful POST method for any endpoint.
 - [ ] A screenshot of Insomnia, demonstrating a token being returned.
-- [ ] Step-by-step instructions for how to register a new user and create a new project (i.e., endpoints and body data).
+- [ ] Step-by-step instructions for how to register a new user and create a new project (i.e. endpoints and body data).
 - [ ] Your refined API specification and Database Schema.
