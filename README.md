@@ -124,9 +124,9 @@ Your crowdfunding project must:
 
 Please include the following in your README document:
 
-- [ ] [A link to the deployed project.](https://menthub-3e662e18d026.herokuapp.com/)
-- [ ] [A screenshot of Insomnia, demonstrating a successful GET method for any endpoint.](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-- [ ] [A screenshot of Insomnia, demonstrating a successful POST method for any endpoint.](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-- [ ] [A screenshot of Insomnia, demonstrating a token being returned.](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+- [ ] A link to the deployed [project](https://menthub-3e662e18d026.herokuapp.com/).
+- [ ] A [screenshot](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) of Insomnia, demonstrating a successful GET method for any endpoint.
+- [ ] A [screenshot](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) of Insomnia, demonstrating a successful POST method for any endpoint.
+- [ ] A [screenshot](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) of Insomnia, demonstrating a token being returned.
 - [ ] Step-by-step instructions for how to register a new user and create a new project (i.e. endpoints and body data).
 - [ ] Your refined API specification and Database Schema.
