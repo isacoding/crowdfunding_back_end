@@ -124,10 +124,10 @@ Your crowdfunding project must:
 
 Please include the following in your README document:
 
-- [x] A link to the deployed [project](https://menthub-3e662e18d026.herokuapp.com/).
-- [x] A [screenshot](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) of Insomnia, demonstrating a successful GET method for any endpoint.
-- [x] A [screenshot](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) of Insomnia, demonstrating a successful POST method for any endpoint.
-- [x] A [screenshot](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) of Insomnia, demonstrating a token being returned.
+- [x] A link to the deployed <a href="https://menthub-3e662e18d026.herokuapp.com/" target="_blank">project</a>.
+- [x] A <a href="https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">screenshot</a> of Insomnia, demonstrating a successful GET method for any endpoint.
+- [x] A <a href="https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">screenshot</a> of Insomnia, demonstrating a successful POST method for any endpoint.
+- [x] A <a href="https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">screenshot</a> of Insomnia, demonstrating a token being returned.
 - [x] Your refined API specification and Database Schema.
 - [x] Step-by-step instructions for how to register a new user and create a new project (i.e. endpoints and body data).
 
