@@ -87,6 +87,12 @@ MentHub is a platform designed to connect women in STEM fields and those transit
 
 ---
 
+## Database Schema
+
+<img src="crowdfunding/images/menthub_database_schema_v3.jpg" alt="MentHub Database Schema" width="400"/>
+
+---
+
 ## Project Requirements
 
 Your crowdfunding project must:
@@ -124,9 +130,9 @@ Your crowdfunding project must:
 
 Please include the following in your README document:
 
-- [ ] A link to the deployed [project](https://menthub-3e662e18d026.herokuapp.com/).
-- [ ] A [screenshot](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) of Insomnia, demonstrating a successful GET method for any endpoint.
-- [ ] A [screenshot](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) of Insomnia, demonstrating a successful POST method for any endpoint.
-- [ ] A [screenshot](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) of Insomnia, demonstrating a token being returned.
+- [x] A link to the deployed [project](https://menthub-3e662e18d026.herokuapp.com/).
+- [x] A [screenshot](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) of Insomnia, demonstrating a successful GET method for any endpoint.
+- [x] A [screenshot](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) of Insomnia, demonstrating a successful POST method for any endpoint.
+- [x] A [screenshot](https://www.canva.com/design/DAGUpC5dtX0/ERgCUOCPBbzXIyX8YnF03A/edit?utm_content=DAGUpC5dtX0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) of Insomnia, demonstrating a token being returned.
 - [ ] Step-by-step instructions for how to register a new user and create a new project (i.e. endpoints and body data).
-- [ ] Your refined API specification and Database Schema.
+- [x] Your refined API specification and Database Schema.
